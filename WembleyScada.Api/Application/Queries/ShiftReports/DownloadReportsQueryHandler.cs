@@ -29,7 +29,7 @@ public class DownloadReportsQueryHandler : IRequestHandler<DownloadReportsQuery,
 
         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-        var blobServiceClient = new BlobServiceClient("DefaultEndpointsProtocol=https;AccountName=thaiduongstorage;AccountKey=6PGTpI+9M33voc8abMjQw/1JuIVK5x1LVxlWngVVV4LJcgp9ziRfDU4+mtrr+39U4TG5msth95Gy+AStZELbgg==;EndpointSuffix=core.windows.net");
+        var blobServiceClient = new BlobServiceClient("");
         var containerClient = blobServiceClient.GetBlobContainerClient("oee-container");
         var blobClient = containerClient.GetBlobClient("OEEreport-Wembley.xlsx");
 
